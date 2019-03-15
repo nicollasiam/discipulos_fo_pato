@@ -1,0 +1,26 @@
+.navbar-wrapper {
+  width: 100%;
+  background-color: $dark-purple;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+
+  .navbar {
+    padding-bottom: 0;
+    height: $navbar-height;
+
+    .active {
+      border-bottom: .3rem solid $orange;
+    }
+  }
+
+  nav {
+    margin-bottom: $navbar-margin-bottom;
+
+    .nav-link {
+      color: $white !important;
+
+      &:hover {
+        opacity: .7;
+      }
+    }
+  }
+}

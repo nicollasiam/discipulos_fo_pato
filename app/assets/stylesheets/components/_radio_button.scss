@@ -1,0 +1,53 @@
+.style-input {
+  input[type="checkbox"]:empty {
+    display: none;
+  }
+
+  input[type="checkbox"]:empty ~ label {
+    position: relative;
+    line-height: 1.5em;
+    text-indent: 2.25em;
+    cursor: pointer;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+  }
+
+  input[type="checkbox"]:empty ~ label:before {
+    position: absolute;
+    display: block;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    content: '';
+    width: 1.5em;
+    background: #D1D3D4;
+    border-radius: 3px 0 0 3px;
+  }
+
+  input[type="checkbox"]:hover:not(:checked) ~ label {
+    color: #888;
+  }
+
+  input[type="checkbox"]:hover:not(:checked) ~ label:before {
+    content: '\2714';
+    text-indent: .4em;
+    color: #C2C2C2;
+  }
+
+  input[type="checkbox"]:checked ~ label {
+    color: #777;
+  }
+
+  input[type="checkbox"]:checked ~ label:before {
+    content: '\2714';
+    text-indent: .4em;
+    color: #fff;
+    background-color: $orange;
+  }
+
+  input[type="checkbox"]:focus ~ label:before {
+    box-shadow: 0 0 0 3px #999;
+  }
+}

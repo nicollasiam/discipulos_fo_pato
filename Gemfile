@@ -3,6 +3,10 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.5.1'
 
+source 'https://rails-assets.org' do
+  gem 'rails-assets-jquery.inputmask', '~> 3.3.0'
+end
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.2'
 # Use postgresql as the database for Active Record
@@ -77,6 +81,9 @@ gem 'aws-ses', '~> 0.6.0', require: 'aws/ses'
 gem 'faker', git: 'https://github.com/stympy/faker.git', branch: 'master'
 gem 'pg'
 gem 'paper_trail'
+
+# Datepicker
+gem 'bootstrap-datepicker-rails'
 
 group :production do
   gem 'exception_notification'

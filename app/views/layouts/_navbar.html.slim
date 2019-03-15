@@ -1,0 +1,11 @@
+.navbar-wrapper
+  .container-fluid
+    nav.navbar.navbar-expand-lg.navbar-dark
+      = link_to 'Pedidos', root_path, class: 'navbar-brand nav-link nav-activable'
+      - if current_rich
+        .collapse.navbar-collapse
+          ul.navbar-nav.mx-auto
+            / - if policy(Request).create?
+          li.nav-item
+            = link_to root_path, class: 'nav-link' do
+              = icon('fas', 'plus-circle', 'Novo Pedido')

@@ -12,9 +12,14 @@
 //
 //= require rails-ujs
 //= require activestorage
-
 //= require jquery3
 //= require jquery_ujs
 //= require popper
 //= require bootstrap
+//= require bootstrap-datepicker
+//= require jquery.inputmask/inputmask
+//= require jquery.inputmask/inputmask.extensions
+//= require jquery.inputmask/inputmask.numeric.extensions
+//= require jquery.inputmask/inputmask.date.extensions
+//= require jquery.inputmask/jquery.inputmask
 //= require_tree .

@@ -9,7 +9,15 @@
   </head>
 
   <body>
+    <%= render 'layouts/navbar' %>
+
+    <% flash.each do |key, value| %>
+      <%= content_tag :div, value, class: "alert alert-#{alert_key(key)} alert-hide", role: 'alert' %>
+    <% end %>
+
+    <%= render 'layouts/modal' %>
     <%= yield %>
+
     <%= javascript_include_tag 'application' %>
   </body>
 </html>
