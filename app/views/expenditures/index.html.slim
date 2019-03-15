@@ -1,0 +1,5 @@
+.container
+  .row
+    .col-sm-12
+      #mainTable.table-responsive
+        = render 'expenditures/support/expenditures_table' if @expenditures.any?

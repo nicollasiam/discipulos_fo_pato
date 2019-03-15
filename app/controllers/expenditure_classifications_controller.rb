@@ -1,0 +1,2 @@
+class ExpenditureClassificationsController < ApplicationController
+end

@@ -1,0 +1,18 @@
+table.table-hover.text-left.table.table-striped
+  thead.thead-dark
+    tr
+      th O que?
+      th Quanto?
+      th De onde?
+
+  tbody
+    - @expenditures.each do |expenditure|
+      tr
+        / Info
+        td = expenditure.information
+
+        / Value
+        td = expenditure.value
+
+        / Type
+        td = expenditure.expenditure_classification.expenditure_type

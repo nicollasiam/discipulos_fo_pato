@@ -1,0 +1,2 @@
+class ExpenditureClassification < ApplicationRecord
+end
