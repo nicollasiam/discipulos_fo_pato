@@ -17,7 +17,6 @@
                                                         Date.current.year,
                                                         Date.current.year + 1]
 
-                = f.input :rich_id, as: :hidden, input_html: { value: current_rich.id }
                 = f.input :expenditure_classification_id, collection: ExpenditureClassification.types_for_combo
 
                 .row.style-input
