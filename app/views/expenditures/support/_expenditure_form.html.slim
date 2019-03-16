@@ -1,0 +1,26 @@
+.centerWrapper
+  .container
+    .row
+      .col-xs-12.col-sm-6.offset-sm-3
+        .boxWrapper
+          .row
+            .col-sm-12
+              = simple_form_for @expenditure do |f|
+                = f.input :value, autofocus: true
+                = f.input :payment_date,
+                          as: :string,
+                          input_html: { class: 'datepicker dateMask' }
+
+                = f.input :information
+                = f.input :reference_month, collection: ['Janeiro', 'Fevereiro']
+                = f.input :reference_year, collection: [Date.current - 1,
+                                                        Date.current,
+                                                        Date.current + 1]
+
+                = f.input :rich_id, as: :hidden, input_html: { value: current_rich.id }
+                = f.input :expenditure_classification_id, collection: ExpenditureClassification.all
+
+                .row.style-input
+                  = f.input :planned
+
+                = f.button :submit, class: "button btn-orange", remote: true

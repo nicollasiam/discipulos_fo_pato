@@ -58,7 +58,6 @@
 }
 
 .centerWrapper {
-  min-height: 80vh;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -70,6 +69,7 @@
     border-radius: 5px;
     padding: 20px;
     background-color: white;
+    background-color: $light-grey;
 
     &-purple {
       border: 1px solid $dark-purple;
