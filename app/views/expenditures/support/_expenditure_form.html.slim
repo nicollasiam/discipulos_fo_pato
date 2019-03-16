@@ -17,7 +17,7 @@
                                                         Date.current.year,
                                                         Date.current.year + 1]
 
-                = f.input :expenditure_classification_id, collection: ExpenditureClassification.types_for_combo
+                = f.input :expenditure_classification_id, collection: current_rich.my_expenditures
 
                 .row.style-input
                   = f.input :planned

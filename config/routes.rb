@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   root to: 'expenditures#index'
 
+  resources :reports, only: :index
   resources :plannings
   resources :expenditures
   resources :expenditures_classifications

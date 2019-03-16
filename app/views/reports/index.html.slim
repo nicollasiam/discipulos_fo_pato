@@ -1,0 +1,21 @@
+.container
+  .row
+    .col-sm-12
+      table.table-hover.text-left.table.table-striped
+        thead.thead-dark
+          tr
+            th O que?
+            th Planejado
+            th Gasto
+
+        tbody
+          - @final_hash.each do |key, val|
+            tr
+              / Info
+              td = key
+
+              / planning
+              td = val[:planning]
+
+              / spent
+              td = val[:expenditure]
