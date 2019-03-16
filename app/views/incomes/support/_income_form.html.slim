@@ -5,22 +5,13 @@
         .boxWrapper
           .row
             .col-sm-12
-              = simple_form_for @expenditure do |f|
+              = simple_form_for @income do |f|
                 = f.input :value, autofocus: true
-                = f.input :payment_date,
-                          as: :string,
-                          input_html: { class: 'datepicker dateMask' }
 
                 = f.input :information
                 = f.input :reference_month, collection: ['Janeiro', 'Fevereiro']
                 = f.input :reference_year, collection: [Date.current.year - 1,
                                                         Date.current.year,
                                                         Date.current.year + 1]
-
-                = f.input :rich_id, as: :hidden, input_html: { value: current_rich.id }
-                = f.input :expenditure_classification_id, collection: ExpenditureClassification.types_for_combo
-
-                .row.style-input
-                  = f.input :planned
 
                 = f.button :submit, class: "button btn-orange", remote: true
