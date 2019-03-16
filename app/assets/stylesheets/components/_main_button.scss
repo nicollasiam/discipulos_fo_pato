@@ -1,0 +1,31 @@
+#actions-button {
+  position: absolute;
+  background-color: $orange;
+  height: 120px;
+  width: 120px;
+  border-radius: 50%;
+  top: 30px;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+  z-index: 1;
+  cursor: pointer;
+}
+
+#add-expenditure, #add-income {
+  position: absolute;
+  background-color: $purple;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  top: 63px;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+
+  label {
+    position: absolute;
+    top: 55px;
+    display: none;
+    font-weight: bold;
+    color: black;
+    left: 0;
+  }
+}

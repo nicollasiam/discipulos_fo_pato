@@ -1,11 +1,18 @@
-.navbar-wrapper
-  .container-fluid
-    nav.navbar.navbar-expand-lg.navbar-dark
-      = link_to 'Pedidos', root_path, class: 'navbar-brand nav-link nav-activable'
-      - if current_rich
-        .collapse.navbar-collapse
-          ul.navbar-nav.mx-auto
-            / - if policy(Request).create?
-          li.nav-item
-            = link_to root_path, class: 'nav-link' do
-              = icon('fas', 'plus-circle', 'Novo Pedido')
+- if current_rich
+  .navbar-wrapper
+    .container-fluid
+      nav.navbar.navbar-expand-lg.navbar-dark.justify-content-center.d-flex
+        #actions-button.d-flex.justify-content-center.align-items-center
+          = icon('fas', 'plus', style: 'font-size: 52px; color: white;')
+
+        #add-expenditure.d-flex.justify-content-center.align-items-center
+          = link_to new_expenditure_path, class: 'nav-link', 'data-toggle': 'modal', 'data-target': '#modal', remote: true do
+            = icon('fas', 'plus', style: 'color: white;')
+            label Despesa
+
+        #add-income.d-flex.justify-content-center.align-items-center
+          = link_to new_income_path, class: 'nav-link', 'data-toggle': 'modal', 'data-target': '#modal', remote: true do
+            = icon('fas', 'plus', style: 'color: white;')
+            label Ganho
+
+
