@@ -1,0 +1,35 @@
+pt-BR:
+  activerecord:
+    models:
+      expenditure: Despesa  #g
+      expenditure_classification: Classificação de despesas  #g
+      income: Renda  #g
+      rich: Rico  #g
+
+    attributes:
+      expenditure:
+        expenditure_classification_id: :activerecord.models.expenditure_classification  #g
+        information: Informações  #g
+        payment_date: Data da despesa  #g
+        planned: Planejado?  #g
+        reference_month: Mês de referência  #g
+        reference_year: Ano de referência  #g
+        rich: :activerecord.models.rich  #g
+        value: Valor  #g
+
+      expenditure_classification:
+        expenditure_type: Tipo de despesa  #g
+
+      income:
+        information: :activerecord.attributes.expenditure.information  #g
+        reference_month: :activerecord.attributes.expenditure.reference_month  #g
+        reference_year: :activerecord.attributes.expenditure.reference_year  #g
+        rich: :activerecord.models.rich  #g
+        value: :activerecord.attributes.expenditure.value  #g
+
+      rich:
+        email: O email  #g
+        encrypted_password: Senha Criptografada  #g
+        remember_created_at: Lembre-se criado em  #g
+        reset_password_sent_at: Redefinir senha enviada em  #g
+        reset_password_token: Redefinir token de senha  #g

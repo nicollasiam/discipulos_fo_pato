@@ -85,6 +85,9 @@ gem 'paper_trail'
 # Datepicker
 gem 'bootstrap-datepicker-rails'
 
+# translations
+gem 'i18n_generators'
+
 group :production do
   gem 'exception_notification'
 end

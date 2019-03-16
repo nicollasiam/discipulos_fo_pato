@@ -166,6 +166,9 @@ GEM
     hashie (3.6.0)
     i18n (1.6.0)
       concurrent-ruby (~> 1.0)
+    i18n_generators (2.2.0)
+      activerecord (>= 3.0.0)
+      railties (>= 3.0.0)
     io-like (0.3.0)
     jquery-rails (4.3.3)
       rails-dom-testing (>= 1, < 3)
@@ -439,6 +442,7 @@ DEPENDENCIES
   guard-brakeman
   guard-rspec (~> 4.7.3)
   guard-rubocop
+  i18n_generators
   jquery-rails
   kaminari (~> 1.1.1)
   listen (>= 3.0.5, < 3.2)
