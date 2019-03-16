@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_03_14_235246) do
+ActiveRecord::Schema.define(version: 2019_03_16_203620) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -47,6 +47,16 @@ ActiveRecord::Schema.define(version: 2019_03_14_235246) do
     t.index ["rich_id"], name: "index_incomes_on_rich_id"
   end
 
+  create_table "plans", force: :cascade do |t|
+    t.float "value"
+    t.bigint "rich_id"
+    t.bigint "expenditure_classification_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["expenditure_classification_id"], name: "index_plans_on_expenditure_classification_id"
+    t.index ["rich_id"], name: "index_plans_on_rich_id"
+  end
+
   create_table "riches", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
@@ -62,4 +72,6 @@ ActiveRecord::Schema.define(version: 2019_03_14_235246) do
   add_foreign_key "expenditures", "expenditure_classifications"
   add_foreign_key "expenditures", "riches"
   add_foreign_key "incomes", "riches"
+  add_foreign_key "plans", "expenditure_classifications"
+  add_foreign_key "plans", "riches"
 end

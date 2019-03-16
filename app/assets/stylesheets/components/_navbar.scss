@@ -1,5 +1,7 @@
 .navbar-wrapper {
   width: 100%;
+  background-color: $dark-purple;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
 
   .navbar {
     padding-bottom: 0;
@@ -14,6 +16,8 @@
     margin-bottom: $navbar-margin-bottom;
 
     .nav-link {
+      color: $white !important;
+
       &:hover {
         opacity: .7;
       }

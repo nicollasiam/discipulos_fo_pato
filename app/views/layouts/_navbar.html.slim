@@ -1,20 +1,21 @@
 - if current_rich
   .navbar-wrapper
-    .container-fluid
-      / = link_to 'Pedidos', root_path, class: 'navbar-brand nav-link nav-activable'
-      = link_to root_path, id: 'home-icon' do
-        = icon('fas', 'home', style: 'font-size: 52px;')
-      nav.navbar.navbar-expand-lg.navbar-dark.justify-content-center.d-flex
+    .container
+      nav.navbar.navbar-expand-lg.navbar-dark
+        = link_to 'Home', root_path, class: 'navbar-brand nav-link nav-activable'
 
         #actions-button.d-flex.justify-content-center.align-items-center
           = icon('fas', 'plus', style: 'font-size: 52px; color: white;')
 
-        = link_to new_expenditure_path, id: 'add-expenditure', class: 'd-flex justify-content-center align-items-center' do
-            = icon('fas', 'plus', style: 'color: white;')
-            label Despesa
+          = link_to new_expenditure_path, id: 'add-expenditure', class: 'd-flex justify-content-center align-items-center' do
+              = icon('fas', 'plus', style: 'color: white;')
+              label Despesa
 
-        = link_to new_income_path, id: 'add-income', class: 'd-flex justify-content-center align-items-center' do
-          = icon('fas', 'plus', style: 'color: white;')
-          label Ganho
+          = link_to new_income_path, id: 'add-income', class: 'd-flex justify-content-center align-items-center' do
+            = icon('fas', 'plus', style: 'color: white;')
+            label Ganho
+
+        .collapse.navbar-collapse
+          ul.navbar-nav.mx-auto
 
 

@@ -4,17 +4,19 @@ $(document).ready(function() {
       // Esconde os botões
       $(this).removeClass('active');
 
+      $('#add-expenditure').css('z-index', '-1');
       $('#add-expenditure').animate({
-        left: "-=70",
-        top: "-=70",
+        left: "-=90",
+        top: "-=90",
       }, 200, function() {
         // Animation complete.
         $(this).find('label').css('display', 'none');
       });
 
+      $('#add-income').css('z-index', '-1');
       $('#add-income').animate({
-        right: "-=70",
-        top: "-=70",
+        left: "+=90",
+        top: "-=90",
       }, 200, function() {
         // Animation complete.
         $(this).find('label').css('display', 'none');
@@ -24,20 +26,22 @@ $(document).ready(function() {
       $(this).addClass('active');
 
       $('#add-expenditure').animate({
-        left: "+=70",
-        top: "+=70",
+        left: "+=90",
+        top: "+=90",
       }, 200, function() {
         // Animation complete.
         $(this).find('label').fadeIn();
+        $(this).css('z-index', '0');
       });
 
 
       $('#add-income').animate({
-        right: "+=70",
-        top: "+=70",
+        left: "-=90",
+        top: "+=90",
       }, 200, function() {
         // Animation complete.
         $(this).find('label').fadeIn();
+        $(this).css('z-index', '0');
       });
     }
   })
