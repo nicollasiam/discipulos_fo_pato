@@ -16,6 +16,19 @@
             label Ganho
 
         .collapse.navbar-collapse
-          ul.navbar-nav.mx-auto
+          / ul.navbar-nav.mx-auto
+          /   li.nav-item
+          ul.navbar-nav.ml-auto
+            li.nav-item.dropdown
+              a#navbarUserDropdown.nav-link.dropdown-toggle [
+                aria-expanded='false' aria-haspopup='true'
+                data-toggle='dropdown' href='#' role='button']
+                | #{current_rich.email}
+              .dropdown-menu aria-labelledby='navbarUserDropdown'
+                = link_to plans_path, class: 'dropdown-item', method: :delete do
+                  = icon('fas', 'chart-line', 'Planejamento')
+                .dropdown-divider
+                = link_to destroy_rich_session_path, class: 'dropdown-item', method: :delete do
+                  = icon('fas', 'sign-out-alt', 'Log out')
 
 
