@@ -1,0 +1,12 @@
+.centerWrapper
+  .container
+    .row
+      .col-xs-12.col-sm-6.offset-sm-3
+        .boxWrapper
+          .row
+            .col-sm-12
+              = simple_form_for @planning do |f|
+                = f.input :value, autofocus: true
+                = f.input :expenditure_classification_id, collection: ExpenditureClassification.types_for_combo
+
+                = f.button :submit, class: "button btn-orange", remote: true

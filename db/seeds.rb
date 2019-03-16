@@ -15,7 +15,7 @@ if ENV['seed']
     load File.join(Rails.root, 'db', 'seeds', "#{file}.rb")
   end
 else
-  %w[riches expenditure_classifications].each do |file|
+  %w[riches expenditure_classifications plans].each do |file|
     load File.join(Rails.root, 'db', 'seeds', "#{file}.rb")
   end
 end

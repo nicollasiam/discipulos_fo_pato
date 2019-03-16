@@ -25,7 +25,7 @@
                 data-toggle='dropdown' href='#' role='button']
                 | #{current_rich.email}
               .dropdown-menu aria-labelledby='navbarUserDropdown'
-                = link_to plans_path, class: 'dropdown-item', method: :delete do
+                = link_to plannings_path, class: 'dropdown-item' do
                   = icon('fas', 'chart-line', 'Planejamento')
                 .dropdown-divider
                 = link_to destroy_rich_session_path, class: 'dropdown-item', method: :delete do

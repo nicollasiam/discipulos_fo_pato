@@ -47,14 +47,14 @@ ActiveRecord::Schema.define(version: 2019_03_16_203620) do
     t.index ["rich_id"], name: "index_incomes_on_rich_id"
   end
 
-  create_table "plans", force: :cascade do |t|
+  create_table "plannings", force: :cascade do |t|
     t.float "value"
     t.bigint "rich_id"
     t.bigint "expenditure_classification_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["expenditure_classification_id"], name: "index_plans_on_expenditure_classification_id"
-    t.index ["rich_id"], name: "index_plans_on_rich_id"
+    t.index ["expenditure_classification_id"], name: "index_plannings_on_expenditure_classification_id"
+    t.index ["rich_id"], name: "index_plannings_on_rich_id"
   end
 
   create_table "riches", force: :cascade do |t|
@@ -72,6 +72,6 @@ ActiveRecord::Schema.define(version: 2019_03_16_203620) do
   add_foreign_key "expenditures", "expenditure_classifications"
   add_foreign_key "expenditures", "riches"
   add_foreign_key "incomes", "riches"
-  add_foreign_key "plans", "expenditure_classifications"
-  add_foreign_key "plans", "riches"
+  add_foreign_key "plannings", "expenditure_classifications"
+  add_foreign_key "plannings", "riches"
 end

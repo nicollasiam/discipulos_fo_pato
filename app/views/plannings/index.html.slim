@@ -1,0 +1,33 @@
+.container
+  .row
+    .col-sm-12
+      h1 Planejamento
+
+  .row
+    .col-sm-12 style='margin: 30px 0'
+      = link_to new_planning_path, class: 'btn-blue' do
+        = icon('fas', 'plus', 'Novo Planejamento')
+
+  .row
+    .col-sm-12
+      table.table.table-hover style='line-height: 1'
+        thead
+          tr
+            th Despesa
+            th Valor
+            th
+
+        tbody
+          - @plannings.each do |planning|
+            tr
+              td = planning.expenditure_classification.expenditure_type
+              td = planning.value
+              td
+                .actionCell style='display: flex'
+                  / User edit option
+                  = link_to edit_planning_path(planning) do
+                    = icon('fas', 'edit')
+
+                  / User destroy option
+                  = link_to planning_path(planning), method: :delete, data: { confirm: "Tem certeza que deseja excluir este item?" } do
+                    = icon('fas', 'trash-alt')
