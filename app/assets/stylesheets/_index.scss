@@ -1,0 +1,10 @@
+#home-icon {
+  position: absolute;
+  top: 60px;
+  left: 170px;
+  color: $purple;
+
+  &:hover {
+    color: $light-purple;
+  }
+}
