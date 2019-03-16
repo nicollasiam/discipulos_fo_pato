@@ -9,11 +9,19 @@
     tbody {
       td {
         border-radius: 5px;
+        padding: 3px;
+        cursor: pointer;
+
+        &:hover {
+          background-color: $light-grey;
+        }
       }
     }
 
     .active {
       background: $orange !important;
+      color: white;
+      font-weight: bold;
     }
   }
 }

@@ -1,0 +1,146 @@
+.btnActions {
+  background-color: inherit !important;
+
+  i {
+    font-size: 0.7rem;
+  }
+}
+
+.btn-group {
+  margin-bottom: 25px;
+
+  button {
+    font-weight: bold;
+  }
+
+  a:first-child button {
+    border-radius: .25rem 0 0 .25rem;
+  }
+
+  a:last-child button {
+    border-radius: 0 .25rem .25rem 0;
+  }
+
+  .btn-info {
+    background-color: $orange !important;
+    border-color: transparent !important;
+    border-radius: 0;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+
+    &:hover {
+      opacity: .7;
+    }
+
+    &.active {
+      background-color: $dark-orange !important;
+      border-color: transparent !important;
+    }
+  }
+}
+
+.btn-orange {
+  background-color: $orange;
+  color: white;
+  font-weight: bold;
+  // width: 150px;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, .5);
+  font-size: 14px;
+}
+
+.btn-orange-inverse {
+  background-color: white;
+  color: $orange;
+  font-weight: bold;
+  // box-shadow: 1px 1px 1px rgba(0, 0, 0, .5);
+  font-size: 14px;
+  border: 1px solid $orange;
+  border-radius: 25px;
+
+  &:hover {
+    color: $dark-orange;
+  }
+}
+
+.btn-blue {
+  background-color: $dark-blue;
+  color: white;
+  font-weight: bold;
+  // width: 150px;
+  border-radius: 5px;
+  padding: 7px;
+  border: none;
+  cursor: pointer;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, .5);
+  font-size: 14px;
+
+  &:hover {
+    opacity: .9;
+    color: $white;
+  }
+}
+
+.btn-google {
+  color: $white;
+  background-color: #DD4B39;
+  display: block;
+  padding: 8px;
+  font-size: 1.1em;
+  border-radius: 6px;
+  position: relative;
+  padding-left: 60px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+
+  i {
+    padding-right: 10px;
+    padding-right: 10px;
+    font-size: 1.5em;
+    position: absolute;
+    left: 10px;
+    top: 0;
+    line-height: 43px;
+    border-right: 1px solid;
+  }
+
+  &:hover {
+    color: $white;
+    background-color: #C23321;
+  }
+}
+
+.btn-close {
+  padding: 5px 12px;
+  border: 2px solid $orange;
+  border-radius: 5px;
+  background-color: $orange;
+  color: $white;
+
+  &:hover {
+    color: $white;
+    border: 2px solid $dark-orange;
+    background-color: $dark-orange;
+  }
+}
+
+.btn-approval {
+  padding: 10px 15px;
+  border: 1px solid;
+  border-radius: 50px;
+  margin-top: 20px;
+
+  &.approve {
+    border-color: darkgreen;
+
+    a {
+      color: darkgreen;
+    }
+  }
+
+  &.disapprove {
+    border-color: darkred;
+
+    a {
+      color: darkred;
+    }
+  }
+}
