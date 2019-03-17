@@ -12,7 +12,7 @@
                           input_html: { class: 'datepicker dateMask' }
 
                 = f.input :information
-                = f.input :reference_month, collection: ['Janeiro', 'Fevereiro']
+                = f.input :reference_month, collection: months_for_combo
                 = f.input :reference_year, collection: [Date.current.year - 1,
                                                         Date.current.year,
                                                         Date.current.year + 1]

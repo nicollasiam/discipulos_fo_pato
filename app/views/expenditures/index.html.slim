@@ -1,5 +1,4 @@
 .container
   .row
-    .col-sm-12
-      #mainTable.table-responsive
-        = render 'expenditures/support/expenditures_table' if @expenditures.any?
+    .col-sm-8.offset-sm-2
+      = render 'expenditures/support/expenditures_table'

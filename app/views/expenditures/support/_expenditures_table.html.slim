@@ -1,18 +1,37 @@
-table.table-hover.text-left.table.table-striped
-  thead.thead-dark
-    tr
-      th O que?
-      th Quanto?
-      th De onde?
+- months_for_combo.each do |month|
+  table.greyRowTable.table-bordered
+    thead
+      tr.month-row data-target="##{month[0]}-expenditure" style='cursor: pointer'
+        th.firstCell style='width: 50%'
+          = month[0]
+        th style='width: 10%'
+          | ______________________________
+        th style='width: 20%'
+          | ______________________________
+        th.lastCell style='width: 10%'
+          | ______________________________
+        th.lastCell style='width: 10%'
 
-  tbody
-    - @expenditures.each do |expenditure|
-      tr
-        / Info
-        td = expenditure.information
+    tbody.collapse id="#{month[0]}-expenditure"
+      - if @final_hash[month[1]].present?
+        - @final_hash[month[1]].each do |expenditure|
+          tr.dataRow
+            td.firstCell style='width: 50%'
+              = expenditure[:info]
 
-        / Value
-        td = expenditure.value
+            td style='width: 10%'
+              = expenditure[:value]
 
-        / Type
-        td = expenditure.expenditure_classification.expenditure_type
+            td style='width: 20%'
+              = expenditure[:type]
+
+            td style='width: 10%'
+              = expenditure[:planned] ? 'planejado' : 'realizado'
+
+            td.lastCell.actionCell.d-flex
+              = link_to edit_expenditure_path(id: expenditure[:id], 'data-toggle': 'tooltip', 'data-placement': 'top', title: 'Editar Despesa') do
+                = icon('fas', 'edit')
+
+              - if expenditure[:planned]
+                = link_to edit_expenditure_path(id: expenditure[:id], 'data-toggle': 'tooltip', 'data-placement': 'top', title: 'Confirmar Despesa') do
+                  = icon('fas', 'money')

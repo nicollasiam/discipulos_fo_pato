@@ -6,7 +6,8 @@
           tr
             th O que?
             th Planejado
-            th Gasto
+            th Gasto Realizado
+            th Gasto Planejado
 
         tbody
           - @final_hash.each do |key, val|
@@ -19,3 +20,6 @@
 
               / spent
               td = val[:expenditure]
+
+              / planned
+              td = show_planned(val)

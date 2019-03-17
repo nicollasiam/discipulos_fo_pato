@@ -1,31 +1,13 @@
 table {
   width: 100%;
 
-td a {
-  display: block;
-  width: 100%;
-}
+  td a {
+    display: block;
+    width: 100%;
+  }
 
-  .actionCell, .accordionActionCell {
+  .actionCell, {
     overflow: visible;
-  }
-
-  .accordionActionCell {
-    padding: 4px 10px;
-  }
-}
-
-#mainTable {
-  overflow: visible;
-
-  .showDetail {
-    height: 38px;
-    width: 30px;
-  }
-
-  .titleCell {
-    height: 38px;
-    text-decoration: underline;
   }
 }
 
@@ -57,11 +39,6 @@ td a {
     font-size: 15px;
   }
 
-  .dataCell {
-    padding-left: 15px;
-    border-left: 10px solid $blue;
-  }
-
   .firstCell {
     padding-left: 7px;
     border-radius: 15px 0 0 15px
@@ -80,22 +57,5 @@ td a {
     padding-bottom: 4px;
     padding-top: 4px;
     border: none;
-  }
-
-  .lowOpacityRow {
-    opacity: .3;
-  }
-}
-
-.totalWrapper {
-  margin-right: 50px;
-
-  span {
-    font-weight: bold;
-
-    &:first-child {
-      margin-right: 15px;
-      text-decoration: underline;
-    }
   }
 }
